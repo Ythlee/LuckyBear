@@ -846,7 +846,7 @@
 #endif
 
 /** FATFS 的 API（需要单独添加）。使用 f_open, f_read 等。*/
-#define LV_USE_FS_FATFS 1
+#define LV_USE_FS_FATFS 0
 #if LV_USE_FS_FATFS
     #define LV_FS_FATFS_LETTER 'C'     /**< 为此驱动程序设置一个大写驱动器标识字母（例如 'A'）。*/
     #define LV_FS_FATFS_PATH ""         /**< 设置工作目录。文件/目录路径将附加到此目录。*/
