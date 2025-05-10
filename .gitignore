@@ -1,7 +1,8 @@
 # Keil IDE files
-*.uvoptx
-*.uvprojx
+*.uvprojx.user
 *.uvguix.*
+*.uvoptx
+*.uvoptx.bak
 *.crf
 *.d
 *.dep
