@@ -21,7 +21,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f1xx_it.h"
-
+#include "timer.h"
 /** @addtogroup STM32F1xx_HAL_Examples
  * @{
  */
@@ -209,6 +209,11 @@ void USART1_IRQHandler(void)
 //    uart3.RxCounter += (U3_RX_MAX - __HAL_DMA_GET_COUNTER(&uart3.dmarx));
 //    HAL_UART_AbortReceive_IT(&uart3.uart);
 //  }
+//}
+
+//void TIM3_IRQHandler(void)
+//{
+//	HAL_TIM_IRQHandler(&tim3);   //¶¨Ê±Æ÷3ÖÐ¶Ï´¦Àíº¯Êý
 //}
 
 /**

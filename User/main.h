@@ -11,5 +11,6 @@
 #include "led.h"
 #include "spi.h"
 #include "spi_sd.h"
-#include "mymalloc.h"
+#include "timer.h"
+
 #endif

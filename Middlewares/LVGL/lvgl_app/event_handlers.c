@@ -4,11 +4,12 @@
 #include "event_handlers.h"
 #include "screen.h"  // 添加screen.h头文件，声明create_main_screen函数
 #include "dropdown_menu.h"  // 添加dropdown_menu.h头文件，声明create_dropdown_menu函数和dropdown_menu变量
-
+#include "timer.h"
 void slider_event_cb(lv_event_t * e) {
     lv_obj_t * slider = lv_event_get_target(e);
     int32_t value = lv_slider_get_value(slider);
-    printf("Brightness adjusted to: %d\n", value);
+    __HAL_TIM_SET_COMPARE(&tim3, TIM_CHANNEL_3, value * 3);
+    printf("Brightness adjusted to: %d\n", value*3);
 }
 
 void scr_event_cb(lv_event_t * e) {
