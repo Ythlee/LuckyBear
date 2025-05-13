@@ -188,28 +188,28 @@ void USART1_IRQHandler(void)
     HAL_UART_AbortReceive_IT(&uart1.uart);
   }
 }
-void USART2_IRQHandler(void)
-{
-  HAL_UART_IRQHandler(&uart2.uart);
+//void USART2_IRQHandler(void)
+//{
+//  HAL_UART_IRQHandler(&uart2.uart);
 
-  if (__HAL_UART_GET_FLAG(&uart2.uart, UART_FLAG_IDLE))
-  {
-    __HAL_UART_CLEAR_IDLEFLAG(&uart2.uart);
-    uart2.RxCounter += (U2_RX_MAX - __HAL_DMA_GET_COUNTER(&uart2.dmarx));
-    HAL_UART_AbortReceive_IT(&uart2.uart);
-  }
-}
-void USART3_IRQHandler(void)
-{
-  HAL_UART_IRQHandler(&uart3.uart);
+//  if (__HAL_UART_GET_FLAG(&uart2.uart, UART_FLAG_IDLE))
+//  {
+//    __HAL_UART_CLEAR_IDLEFLAG(&uart2.uart);
+//    uart2.RxCounter += (U2_RX_MAX - __HAL_DMA_GET_COUNTER(&uart2.dmarx));
+//    HAL_UART_AbortReceive_IT(&uart2.uart);
+//  }
+//}
+//void USART3_IRQHandler(void)
+//{
+//  HAL_UART_IRQHandler(&uart3.uart);
 
-  if (__HAL_UART_GET_FLAG(&uart3.uart, UART_FLAG_IDLE))
-  {
-    __HAL_UART_CLEAR_IDLEFLAG(&uart3.uart);
-    uart3.RxCounter += (U3_RX_MAX - __HAL_DMA_GET_COUNTER(&uart3.dmarx));
-    HAL_UART_AbortReceive_IT(&uart3.uart);
-  }
-}
+//  if (__HAL_UART_GET_FLAG(&uart3.uart, UART_FLAG_IDLE))
+//  {
+//    __HAL_UART_CLEAR_IDLEFLAG(&uart3.uart);
+//    uart3.RxCounter += (U3_RX_MAX - __HAL_DMA_GET_COUNTER(&uart3.dmarx));
+//    HAL_UART_AbortReceive_IT(&uart3.uart);
+//  }
+//}
 
 /**
  * @brief  This function handles PPP interrupt request.

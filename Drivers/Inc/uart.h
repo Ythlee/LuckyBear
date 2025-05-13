@@ -10,9 +10,9 @@
 
 #define USART_UX USART1
 
-#define U1_TX_SIZE 2048
-#define U1_RX_SIZE 2048
-#define U1_RX_MAX 256
+#define U1_TX_SIZE 128
+#define U1_RX_SIZE 128
+#define U1_RX_MAX 10
 
 #define U2_TX_SIZE 2048
 #define U2_RX_SIZE 2048
