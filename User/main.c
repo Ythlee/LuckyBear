@@ -9,7 +9,7 @@ int main(void)
 	u1_init(921600);
 	led_init();
 	button_init();
-	my_mem_init(SRAMIN);
+
 	lvgl_demo();
 
 	while (1)

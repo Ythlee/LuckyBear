@@ -69,7 +69,7 @@
 
 #if LV_USE_STDLIB_MALLOC == LV_STDLIB_BUILTIN
     /** `lv_malloc()` 可用内存大小，单位字节 (>= 2kB) */
-    #define LV_MEM_SIZE (20 * 1024U)          /**< [字节] */
+    #define LV_MEM_SIZE (35 * 1024U)          /**< [字节] */
 
     /** `lv_malloc()` 内存扩展大小，单位字节 */
     #define LV_MEM_POOL_EXPAND_SIZE 0
@@ -143,7 +143,7 @@
  * 并且不能分块绘制。*/
 
 /** 简单图层块的目标缓冲区大小。*/
-#define LV_DRAW_LAYER_SIMPLE_BUF_SIZE    (10 * 1024)    /**< [字节]*/
+#define LV_DRAW_LAYER_SIMPLE_BUF_SIZE    (24 * 1024)    /**< [字节]*/
 // #define LV_DRAW_LAYER_SIMPLE_BUF_SIZE    (24 * 1024)    /**< [字节]*/
 
 /* 限制为简单和变换图层分配的最大内存。
@@ -196,7 +196,7 @@
      * - 1: 使用一个复杂的渲染器，也能绘制圆角、阴影、斜线和弧线。*/
     #define LV_DRAW_SW_COMPLEX          1
 
-    #if LV_DRAW_SW_COMPLEX == 1
+    #if LV_DRAW_SW_COMPLEX == 0
         /** 允许缓冲一些阴影计算。
          *  `LV_DRAW_SW_SHADOW_CACHE_SIZE` 是要缓冲的最大阴影大小，其中阴影大小为
          *  `shadow_width + radius`。缓存会消耗 `LV_DRAW_SW_SHADOW_CACHE_SIZE^2` 的 RAM。*/
@@ -694,9 +694,9 @@
 
 #define LV_USE_BUTTON        1
 
-#define LV_USE_BUTTONMATRIX  1
+#define LV_USE_BUTTONMATRIX  0
 
-#define LV_USE_CALENDAR   1
+#define LV_USE_CALENDAR   0
 #if LV_USE_CALENDAR
     #if LV_CALENDAR_WEEK_STARTS_MONDAY
         #define LV_CALENDAR_DEFAULT_DAY_NAMES {"Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"}
@@ -710,19 +710,19 @@
     #define LV_USE_CALENDAR_CHINESE 0 // 如果要使用中文农历等特性，可以考虑开启
 #endif  /*LV_USE_CALENDAR*/
 
-#define LV_USE_CANVAS     1
+#define LV_USE_CANVAS     0
 
-#define LV_USE_CHART      1
+#define LV_USE_CHART      0
 
-#define LV_USE_CHECKBOX   1
+#define LV_USE_CHECKBOX   0
 
 #define LV_USE_DROPDOWN   1   /**< 需要: lv_label */
 
 #define LV_USE_IMAGE      1   /**< 需要: lv_label */
 
-#define LV_USE_IMAGEBUTTON     1
+#define LV_USE_IMAGEBUTTON     0
 
-#define LV_USE_KEYBOARD   1
+#define LV_USE_KEYBOARD   0
 
 #define LV_USE_LABEL      1
 #if LV_USE_LABEL
@@ -731,48 +731,48 @@
     #define LV_LABEL_WAIT_CHAR_COUNT 3  /**< 等待字符的数量 */
 #endif
 
-#define LV_USE_LED        1
+#define LV_USE_LED        0
 
 #define LV_USE_LINE       1
 
-#define LV_USE_LIST       1
+#define LV_USE_LIST       0
 
 #define LV_USE_LOTTIE     0  /**< 需要: lv_canvas, thorvg */
 
 #define LV_USE_MENU       1
 
-#define LV_USE_MSGBOX     1
+#define LV_USE_MSGBOX     0
 
-#define LV_USE_ROLLER     1   /**< 需要: lv_label */
+#define LV_USE_ROLLER     0   /**< 需要: lv_label */
 
-#define LV_USE_SCALE      1
+#define LV_USE_SCALE      0
 
 #define LV_USE_SLIDER     1   /**< 需要: lv_bar */
 
-#define LV_USE_SPAN       1
+#define LV_USE_SPAN       0
 #if LV_USE_SPAN
     /** 一行文本最多可以包含这么多 span 描述符。*/
     #define LV_SPAN_SNIPPET_STACK_SIZE 64
 #endif
 
-#define LV_USE_SPINBOX    1
+#define LV_USE_SPINBOX    0
 
-#define LV_USE_SPINNER    1
+#define LV_USE_SPINNER    0
 
 #define LV_USE_SWITCH     1
 
-#define LV_USE_TABLE      1
+#define LV_USE_TABLE      0
 
 #define LV_USE_TABVIEW    1
 
-#define LV_USE_TEXTAREA   1   /**< 需要: lv_label */
+#define LV_USE_TEXTAREA   0   /**< 需要: lv_label */
 #if LV_USE_TEXTAREA != 0
     #define LV_TEXTAREA_DEF_PWD_SHOW_TIME 1500    /**< [毫秒] */
 #endif
 
-#define LV_USE_TILEVIEW   1
+#define LV_USE_TILEVIEW   0
 
-#define LV_USE_WIN        1
+#define LV_USE_WIN        0
 
 /*==================
  * 主题
@@ -1005,7 +1005,7 @@
     /** 1: 显示已用内存和内存碎片。
      *     - 需要 `LV_USE_STDLIB_MALLOC = LV_STDLIB_BUILTIN`
      *     - 需要 `LV_USE_SYSMON = 1`*/
-    #define LV_USE_MEM_MONITOR 0
+    #define LV_USE_MEM_MONITOR 1
     #if LV_USE_MEM_MONITOR
         #define LV_USE_MEM_MONITOR_POS LV_ALIGN_BOTTOM_LEFT
     #endif
