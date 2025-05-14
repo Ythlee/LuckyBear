@@ -375,7 +375,7 @@ void lcd_init(void)
     HAL_GPIO_Init(LCD_RS_GPIO_PORT, &gpio_init_struct); /* 初始化LCD_RS引脚 */
 
     gpio_init_struct.Pin = LCD_BL_GPIO_PIN;
-    gpio_init_struct.Mode = GPIO_MODE_OUTPUT_PP;        /* 推挽输出 */
+    // gpio_init_struct.Mode = GPIO_MODE_OUTPUT_PP;        /* 推挽输出 */
     HAL_GPIO_Init(LCD_BL_GPIO_PORT, &gpio_init_struct); /* LCD_BL引脚模式设置(推挽输出) */
 
     g_sram_handle.Instance = FSMC_NORSRAM_DEVICE;

@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -444,6 +444,21 @@
               <FileType>1</FileType>
               <FilePath>..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f1xx_hal_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_hal_tim_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_hal_rcc_ex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -530,46 +545,14 @@
               <FilePath>..\Drivers\Src\spisd.c</FilePath>
             </File>
             <File>
-              <FileName>mymalloc.c</FileName>
+              <FileName>timer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\Drivers\Src\mymalloc.c</FilePath>
+              <FilePath>..\Drivers\Src\timer.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Fatfs</GroupName>
-          <Files>
-            <File>
-              <FileName>diskio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\ff15\source\diskio.c</FilePath>
-            </File>
-            <File>
-              <FileName>ff.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\ff15\source\ff.c</FilePath>
-            </File>
-            <File>
-              <FileName>ffsystem.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\ff15\source\ffsystem.c</FilePath>
-            </File>
-            <File>
-              <FileName>ffunicode.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\ff15\source\ffunicode.c</FilePath>
-            </File>
-            <File>
-              <FileName>fattester.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\ff15\exfuns\fattester.c</FilePath>
-            </File>
-            <File>
-              <FileName>exfuns.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Middlewares\ff15\exfuns\exfuns.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>FreeRTOS/CORE</GroupName>
@@ -633,6 +616,26 @@
               <FileName>lv_mainstart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Middlewares\LVGL\lvgl_app\lv_mainstart.c</FilePath>
+            </File>
+            <File>
+              <FileName>demo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\LVGL\lvgl_app\demo.c</FilePath>
+            </File>
+            <File>
+              <FileName>dropdown_menu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\LVGL\lvgl_app\dropdown_menu.c</FilePath>
+            </File>
+            <File>
+              <FileName>event_handlers.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\LVGL\lvgl_app\event_handlers.c</FilePath>
+            </File>
+            <File>
+              <FileName>screen.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\LVGL\lvgl_app\screen.c</FilePath>
             </File>
           </Files>
         </Group>
